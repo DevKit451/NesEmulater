@@ -1,0 +1,1 @@
+public class regAccamulator extends reg {}
