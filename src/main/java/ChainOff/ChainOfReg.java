@@ -1,25 +1,9 @@
-interface chainReg{
-  public boolean get(char registr);
-  public chainReg setReg();
+package ChainOff;
 
-}
-public class ChainOfReg {
-  public chainReg[] h;
-  public byte i=0;
-  private byte j=0;
+import chain.abs.Abs_chain;
+
+public class ChainOfReg extends Abs_chain {
   public ChainOfReg(int num){
-    h = new chainReg[num];
-  }
-  public void addToChain(chainReg nextMember){
-    h[i] = nextMember;
-  i++;
-  }
-  public chainReg getReg(char command){
-    
-    while (h[j].get(command)== false)
-      {
-        j++;
-      }
-    return h[j];
+    super(num);
   }
 }

@@ -1,15 +1,16 @@
 package chainMember.operation.operations;
 
-import chainMember.memory.abs_memory;
-import chainMember.operation.abs_operation;
-import chainMember.registr.abs_registr;
+import chainMember.memory.Abs_memory;
+import chainMember.operation.Abs_operation;
+import chainMember.registr.Abs_registr;
 
-public class AddRegistr extends abs_operation{
+public class AddRegistr extends Abs_operation {
     public AddRegistr(String operationType){
       super(operationType);
   }
+    public  AddRegistr() {super();};
 
-    public void doStuff (abs_registr registr, abs_memory memory, int adr){
+    public void doStuff (Abs_registr registr, Abs_memory memory, int adr){
         registr.set(registr.get()+memory.get(adr));
     }
 }

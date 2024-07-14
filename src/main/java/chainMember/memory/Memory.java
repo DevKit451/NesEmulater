@@ -1,5 +1,7 @@
-public class Memory extends abs_memory{
-    public Memory(int size, String memType){
-        super(size,memType);
+package chainMember.memory;
+
+public class Memory extends Abs_memory{
+    public Memory(String memType, int size){
+        super(memType, size);
     }
 }

@@ -1,15 +1,17 @@
 package chainMember.operation;
 
 import chainMember.inter.int_chainMember;
+import chainMember.registr.Abs_registr;
 import strategy.inter.int_strategy;
 
-import chainMember.registr.abs_registr;
-import chainMember.memory.abs_memory;
+import chainMember.registr.Abs_registr;
+import chainMember.memory.Abs_memory;
 
-public abstract class abs_operation implements int_strategy, int_chainMember{
+public abstract class Abs_operation implements int_strategy, int_chainMember{
     protected String operationType;
+    protected Abs_operation() {};
 
-    protected  abs_operation (String operationType){
+    public  Abs_operation (String operationType){
         this.operationType=operationType;
     };
 
@@ -20,7 +22,7 @@ public abstract class abs_operation implements int_strategy, int_chainMember{
         this.doStuff (registr,memory,adr);
     }
     
-    public abstract void doStuff (abs_registr registr, abs_memory memory, int adr);
+    public abstract void doStuff (Abs_registr registr, Abs_memory memory, int adr);
 
 
 }

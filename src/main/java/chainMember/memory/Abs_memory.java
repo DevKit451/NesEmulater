@@ -1,15 +1,15 @@
 package chainMember.memory;
 
-import chainMember.memory.inter.int_memory;
+import chainMember.memory.inter.*;
 import chainMember.inter.int_chainMember;
 
-public abstract class abs_memory implements int_chainMember, int_memory{
+public abstract class Abs_memory implements int_chainMember, int_memory{
     private String memType;
     private byte[] memory;
 
-    protected abs_memory(int size, String memType){
-        memory= new byte[size];
-        this.memType=memType;
+    protected <String, Integer> Abs_memory( String memType, Integer size){
+        memory= new byte[(int) size];
+        this.memType= java.lang.String.valueOf(memType);
     }
 
     public String responce(){
